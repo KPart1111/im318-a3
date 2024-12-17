@@ -94,6 +94,7 @@ $inspect(todoList);
           font-size: 1.2rem;
           background-image: linear-gradient(#c4ffb0, #4d8839);
           background-color: #9de285;
+          color: rgb(26, 26, 26);
           cursor: pointer;
           &:hover {
                background-image: linear-gradient(#b4eca1, #2a4b1f);
@@ -105,6 +106,7 @@ $inspect(todoList);
           font-family: "Solway", serif;
           border-radius: 50px;
           font-size: 1.2rem;
+          color: rgb(26, 26, 26);
           &:hover {
                background-image: linear-gradient(#d25252, #611111);
           }
@@ -115,6 +117,8 @@ $inspect(todoList);
      }
      li button {
           background-color: rgb(210, 82, 82);
+          padding-right: 0.2rem;
+          padding-left: 0.2rem;
      }
      .clear {
           padding: 0.6em 1rem;

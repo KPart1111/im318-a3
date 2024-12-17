@@ -3,7 +3,7 @@ body {
      margin: 0;
      background-color: #F8F1AB;
      font-size: 1.2rem;
-     color: rgb(255, 0, 0);
+     color: rgb(26, 26, 26);
      background-image: url(./lib/images/paper.png);
 }
 .wrapper {
