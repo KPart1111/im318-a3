@@ -107,6 +107,7 @@ $inspect(todoList);
           border-radius: 50px;
           font-size: 1.2rem;
           color: rgb(26, 26, 26);
+          border-color: rgb(26, 26, 26);
           &:hover {
                background-image: linear-gradient(#d25252, #611111);
           }
@@ -117,8 +118,9 @@ $inspect(todoList);
      }
      li button {
           background-color: rgb(210, 82, 82);
-          padding-right: 0.2rem;
-          padding-left: 0.2rem;
+          padding-right: 0.3rem;
+          padding-left: 0.3rem;
+          border-color: rgb(26, 26, 26);
      }
      .clear {
           padding: 0.6em 1rem;
