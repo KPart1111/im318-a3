@@ -1,6 +1,20 @@
 <script>
+import {onMount} from 'svelte';
 let todoItem = $state('');
 let todoList = $state([]);
+let storedList;
+
+onMount(() => {
+     storedList = localStorage.getItem('storedList');
+     if (storedList) {
+          todoList = (JSON.parse(storedList));
+     }
+})
+
+function updateList() {
+     return storedList = localStorage.setItem('storedList', JSON.stringify
+     (todoList));
+}
 
 function addItem(event) {
      event.preventDefault();
@@ -11,28 +25,34 @@ function addItem(event) {
           text: todoItem,
           done: false
      }];
+     updateList();
      todoItem = '';
 }
 function removeItem(index) {
      todoList = todoList.toSpliced(index, 1);
+     updateList();
 } 
 function nuke() {
      todoList = [];
+     localStorage.clear();
 }
 
 $inspect(todoList);
 
 </script>
 
+<h1>To Do:</h1>
+
 <form onsubmit={addItem}>
 <input type="text" bind:value={todoItem}>
 <button type="submit">Add</button>
 </form>
 
+
 <ul>
      {#each todoList as item, index}
           <li>
-               <input type="checkbox" bind:checked={item.done}>
+               <input type="checkbox" bind:checked={item.done} onchange={updateList}>
                <span class:done={item.done}>{item.text}</span>
                <button type="button" onclick={()=> removeItem(index)}>X</button>
           </li>
@@ -72,19 +92,21 @@ $inspect(todoList);
           margin-left: -1.5rem;
           padding: 0.6em 1rem;
           font-size: 1.2rem;
+          background-image: linear-gradient(#c4ffb0, #4d8839);
           background-color: #9de285;
           cursor: pointer;
           &:hover {
-               background-color: #4d8839;
+               background-image: linear-gradient(#b4eca1, #2a4b1f);
           }
      }
      button {
-          background-color: rgb(210, 82, 82);
+          background-color: #d25252;
+          background-image: linear-gradient(#ff9b9b, #c42626);
           font-family: "Solway", serif;
           border-radius: 50px;
           font-size: 1.2rem;
           &:hover {
-               background-color: rgb(163, 31, 31);
+               background-image: linear-gradient(#d25252, #611111);
           }
      }
      ul {

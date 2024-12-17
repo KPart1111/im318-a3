@@ -3,26 +3,30 @@ body {
      margin: 0;
      background-color: #F8F1AB;
      font-size: 1.2rem;
+     color: rgb(26, 26, 26);
      background-image: url(./lib/images/paper.png);
 }
 .wrapper {
      max-width: 600px;
      margin: 0 auto;
      padding: 10.5vw;
+     padding-top: 2.5vw;
 }
 h1 {
      font-family: "Solway", serif;
      font-weight: 800;   
      margin: 0;
+     padding-bottom: 2.5vw;
 }
 .header {
      background-color: #9de285;
      background-image: url(./lib/images/clipboard.png);
+     background-color: linear-gradient(#43613a, #9de285);
      background-repeat: no-repeat;
      background-size:contain;
      background-position: center;
      text-align: center;
-     padding-top: 10vw;
+     padding-top: 27vw;
      padding-bottom: 0vw;
 }
 @media screen and (min-width: 1200px) {

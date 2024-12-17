@@ -4,7 +4,6 @@
 </script>
 <div class="header">
      
-     <h1>To Do:</h1>
 </div>
 <div class="wrapper">
      
