@@ -1,0 +1,33 @@
+body {
+     font-family: "Solway", serif;
+     margin: 0;
+     background-color: #F8F1AB;
+     font-size: 1.2rem;
+     background-image: url(./lib/images/paper.png);
+}
+.wrapper {
+     max-width: 600px;
+     margin: 0 auto;
+     padding: 10.5vw;
+}
+h1 {
+     font-family: "Solway", serif;
+     font-weight: 800;   
+     margin: 0;
+}
+.header {
+     background-color: #9de285;
+     background-image: url(./lib/images/clipboard.png);
+     background-repeat: no-repeat;
+     background-size:contain;
+     background-position: center;
+     text-align: center;
+     padding-top: 10vw;
+     padding-bottom: 0vw;
+}
+@media screen and (min-width: 1200px) {
+     .header {
+     background-position: bottom;
+     background-size: 20vw;
+     }
+}
